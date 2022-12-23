@@ -1,0 +1,16 @@
+
+<form (ngSubmit)="onSubmit()">
+    <label for="numbers-input">Wprowadź liczby oddzielone przecinkami:</label>
+    <input type="text" id="numbers-input" [(ngModel)]="numbersInput" name="numbersInput">
+    <br>
+    <label for="order-input">Wprowadź ASC lub DESC</label>
+    <input type="text" id="order-input" [(ngModel)]="orderInput" name="orderInput">
+    <br>
+    <button type="submit">Sortuj</button>
+  </form>
+  <hr>
+  <a>Wynik</a>
+  <br>
+  <div *ngIf="sorted">
+  <a>{{ numbers | json }}</a>
+</div>
